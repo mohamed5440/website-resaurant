@@ -1,0 +1,556 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"082da40fff","applicationID":"712632982","transactionName":"bgYANhZWWRcFUxdYWldMIzE0GFQLCkQGX0EXAhESHA==","queueTime":0,"applicationTime":86,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"082da40fff",applicationID:"712632982"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script><meta name="GENERATOR" content="Martjack Multi-channel retailing solution" /><title>
+	مقبلات بيتزا هت - اطلب المقبلات اون لاين | بيتزا هت الاردن
+</title><meta id="ctl00_metakeywords" name="keywords" content="مقبلات بيتزا هت, اجنحة الدجاج بيتزا هت, اصابع موزاريلا بيتزا هت" /><meta id="ctl00_metadescription" name="description" content="اطلب المقبلات مع وجبتك الان اون لاين من بيتزا هت الاردن مع خدمة التوصيل، واستمتع بقائمة مقبلات شهية كاصابع الموزاريلا، اجنحة الدجاج، الخبز بالثوم، والمزيد من الاطباق اللذيذة!" /><meta http-equiv="x-dns-prefetch-control" content="on" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="dns-prefetch" href="//martjackstorage.blob.core.windows.net" /><link rel="dns-prefetch" href="//www.googletagmanager.com" /><link rel="dns-prefetch" href="//www.google-analytics.com" /><link rel="dns-prefetch" href="//bam.nr-data.net" /><link rel="dns-prefetch" href="//connect.facebook.net" />
+<link rel="dns-prefetch" href="https://assets.eu.content-cdn.io/script/Zone04" />
+<link rel="dns-prefetch" href="https://assets.eu.content-cdn.io/css" />
+<link rel="dns-prefetch" href="//imagecdn.pizzahut.me/azure" />
+<link href='https://assets.eu.content-cdn.io/css/themes/mjt02012548/ar_main_min.css?v=v1032' rel='stylesheet' type='text/css' /><link href='https://storage.eu.content-cdn.io/am-resources/c79bc8ac-4c69-460f-829b-4d40568d0cca/Stylesheet/ar_CustomStyles.css?v=v272' rel='stylesheet' type='text/css' /><link rel='icon' href='https://storage.eu.content-cdn.io/am-resources/c79bc8ac-4c69-460f-829b-4d40568d0cca/Images/userimages/favicon.ico' type='image/x-icon' /><link rel='shortcut icon' href='https://storage.eu.content-cdn.io/am-resources/c79bc8ac-4c69-460f-829b-4d40568d0cca/Images/userimages/favicon.ico' type='image/x-icon' /><link rel="alternate" hreflang="en-JO" href="https://www.jordan.pizzahut.me/starters" />
+<link rel="alternate" hreflang="ar-JO" href="https://www.jordan.pizzahut.me/ar/starters" /><script type="text/javascript">MartJack ={"Config":{"MerchantId":"c79bc8ac-4c69-460f-829b-4d40568d0cca","st01_path":"https://assets.eu.content-cdn.io/script/Zone04","SiteUrlForControls":"https://www.jordan.pizzahut.me","FilePaths":null,"IsProductCompare":"False","IsReview":"True","AppId":"130908444223515","IsAutoComplete":"False","jsVersion":"v2284","InstalledApps":["MobileSite","LocationAwareness","DeliverySlots","Localization","jordanpizzahut ESB  API Integration","PH Jo"],"PublisherMerchantId":"c79bc8ac-4c69-460f-829b-4d40568d0cca","IsSecurePage":"false","LangCode":"ar","LangSiteUrl":"https://www.jordan.pizzahut.me/ar","IsFacebookUser":"True","Channel":"W","ThemeURL":"https://assets.eu.content-cdn.io/css","Theme":"mjt02012548","IsLightWeightIntegration":"True","Analytics":{"GaProfileId":"UA-50149622-17","Ga4ProfileId":""},"Returnurl":"https%3A%2F%2Fwww.jordan.pizzahut.me%2Far%2F","GoogleClientID":"713510834369-safoinm6emeag9l1qpqd4ghe0bpiskll.apps.googleusercontent.com","GoogleAPIKey":"AIzaSyAL_lcT_mWLcWRD4S1zSyJUf354DBgQeKI","IsGoogleUser":"True","IsResponsive":"True","CartOrientation":"H","IsQuickView":true,"NavigationType":"PD","DefaultShoppingListID":"0","Culture":"ar-JO","IsSSLEnabled":true,"ConversionFactor":1.0,"DynamicImagePath":"//storage.eu.content-cdn.io/cdn-cgi/image/{width},{height},quality=75,format=auto,fit=cover,g=top/am-resources/c79bc8ac-4c69-460f-829b-4d40568d0cca/Images/ProductImages/Large","IsTwitterUser":"False","ResourceUrl":"https://storage.eu.content-cdn.io/am-resources/c79bc8ac-4c69-460f-829b-4d40568d0cca","JSLibUrl":"https://assets.eu.content-cdn.io/script/ZoneTP","CacheCart":true,"CachedCartTTL":1200000},"PageInfo":{"PageID":717216,"PredefinedPageID":5,"PageTitle":"مقبلات بيتزا هت - اطلب المقبلات اون لاين | بيتزا هت الاردن","PageConfigType":"sccategory","CategoryID":"Starters","CategoryName":"Starters","CategoryTree":null,"BrandID":null,"BrandName":null,"GroupID":null,"GroupName":null,"PostID":0,"ProductID":0,"ProductTitle":null,"Sku":null,"PackageQuantity":0,"ProductWeight":0.0,"ProductMrp":0.0,"WebPrice":0.0,"OfferText":null,"BlogId":0,"Variants":null,"PageType":"sccategory","IsAvailable":false},"ProviderConfig":{"GoogleAddwords":{"RemarketingEnabled":null,"ConversionId":null,"ConversionLanguage":null,"ConversionFormat":null,"ConversionColor":null,"ConversionLabel":null,"ConversionValue":null,"IsRemarketingVariantLevel":null},"Tags":[],"TealiumTagManager":null},"WebNotifications":[],"Current":{"Cart":[],"Location":{"LocationId":0,"LocationCode":null,"LocationName":null,"City":null,"Country":null},"User":{"Email":null,"UserID":null,"FBProfileId":null,"GmailProfileID":null,"crm_externalid":null,"crm_uniqueid":null,"FirstName":null,"LastName":null,"MobileNo":null,"UserEmail":null,"UserIP":"155.94.218.98","HashKey":null,"SignedUpDate":null},"RequestTime":1685015264,"CurrencySymbol":"<span class=\"sp_currencysyb\">د.ا.‏</span><span class=\"sp_amt\"></span>","CurrencyCode":"JOD","OrderId":0,"OrderTotal":0.0,"CartSubTotal":0.0,"CheckoutType":null,"ActualShippingCost":0.0,"TaxTotal":0.0,"BillEmail":null,"OrderStatus":null,"Source":null,"DeliveryMode":"H","utm_source":"","utm_medium":"","utm_campaign":"","IsOrderTrack":false,"utm_content":"","BillTotal":0.0,"DiscountAmount":0.0,"CouponCode":null,"CouponMessage":null,"OrderItems":[],"MerchantDefaultLocationID":0,"IsInvokeLocationPopup":false,"UserID":"00000000-0000-0000-0000-000000000000","IsGuestUser":false},"WidgetSettings":"","Apps":{},"StandardUrlMap":{"search":"SearchResults.aspx","home":"Default.aspx","product":"ProductDetails.aspx","_ShowCategory":"ShowCategory.aspx","registration":"Registration/UserRegistration.aspx","cart":"Cart.aspx","login":"Registration/Login.aspx","returnpage":"Retpage.aspx","storemap":"StoreMap.aspx","createcoupon":"CreateCoupon.aspx","searchproduct":"SearchProduct.aspx","sitemap":"Sitemap.aspx","rss":"RSSFeed.aspx","kiosk-default":"KIOSK/Default.aspx","kiosk-catalog":"KIOSK/KIOSKHomePage.aspx","kiosk-search":"KIOSK/KioskRefineSearch.aspx","kiosk-product":"KIOSK/ProductList.aspx","addressdetails":"AddressDetails.aspx","payment":"Payment.aspx","searchresult":"SearchResults.aspx?Search=*","showbrand":"BrandPage.aspx","searchsummary":"SearchResults.aspx?Search=*&multi=true","trackorder":"TrackOrder.aspx","useractivation":"Registration/UserActivation.aspx","checkout":"SinglePageCheckout.aspx","pagenotfound":"PageNotFound.aspx","myaccount":"Registration/MyAccount.aspx","setpassword":"Registration/SetPassword.aspx","post":"Registration/Post.aspx"}}</script><script src="https://assets.eu.content-cdn.io/script/Zone04/js/Lib/MJ_Static-Built.js?v=v2284" type="text/javascript"></script><link rel="canonical" href="https://www.jordan.pizzahut.me/ar/starters" /></head>
+<body class="otherpages contentpage_717216">
+
+<noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-W2WBDQ8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+<script type="text/javascript">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-W2WBDQ8');
+        </script>
+
+<script type="text/javascript">
+            var DynamicModules = [];
+    </script>
+<script>MartJack.WidgetSettings.QuickAdd.IsFlipAddEditView="false";MartJack.WidgetSettings.
+Jval.ShowErrorSummary="true";MartJack.WidgetSettings.
+Jval.StyleType = "callout";MartJack.WidgetSettings.
+deal_awesome_message =  "Awesome! You've built your deal";MartJack.WidgetSettings.
+deal_awesome_message_ar = "ممتاز! لقد اتتمت اختيارك";MartJack.WidgetSettings.
+Included_Max_QuantityList=["jor-deal-mybox","Jd-Dls-MyBox","MegaChsBx","Jd-Dls-MlFor2","Jd-Dls-bgbox","Jd-Dls-FmlyMI","Jd-Dls-PrtyMI","Jd-Dls-TrpleTrtBx","Jd-Dls-rmdnml","Jd-Dls-stfdcrst"]
+Excluded_DealSku_List_Customize=['Jd-Dls-BOGOFre'];MartJack.WidgetSettings.
+Excluded_BOGODeal_Upgrade=["Jd-Dls-BOGOFre"];MartJack.WidgetSettings.
+Excluded_Sku_List_For_Toping_Count=["Jd-Vggs-MzrlChs"]; </script>
+
+<div id="fb-root"></div>
+<script type="text/javascript">
+        var page = '';
+        var Varable_Slider = '';
+        var Varable_Scroller = '';
+        var blnIsFacebookUser = 'False';
+        var CartJson = '';
+        var CartItemCount = '0';
+        $(document).ready(function () {
+            if (CartItemCount != "0") {
+                require(['Plugins/Taffy-Min']);
+                require(['App/Widgets/CartControlBase'], function () {
+                    CartControlBase.UpdateCartItemsCount(true, CartJson);
+            });
+            }
+        });
+        $(window).load(function () {
+            var Searchele = "input[id$=txtSearch]";
+            if (typeof MartJack.Apps.Tagalys != "undefined" && $(".tagalys-search").length > 0) {
+                if (MartJack.Config.IsResponsive == 'True') {
+                    require(['Plugins/Foundation'], function () {
+                        $(document).foundation();
+                        if (Foundation.utils.is_medium_only() == true || Foundation.utils.is_small_only() == true) {
+                            Searchele = "input[id$=txtSearch_mobile]";
+                        }
+                    });
+                }
+                require(['Plugins/tagalys', 'App/Widgets/TagalysSearch'], function () {
+                    TagalysWidget.init_tagalys();
+                    TagalysWidget.tagalys_search(Searchele);
+                });
+            }
+            if (typeof MartJack.Apps.Tagalys != "undefined") {
+                require(['App/Widgets/TagalysTracking'], function () {
+                    TagalysTrack.init_tagalystrack();
+                });
+            }
+        });
+		
+        function openSubcriptionContent(evt, cityName) {
+		
+			require(['Lib/jQuery-UI-DatePicker'], function () {});
+			
+			BindDatePicker('txtDsubfromDate');
+			BindDatePicker('txtWsubfromDate');
+			BindDatePicker('txtAsubfromDate');
+			BindDatePicker('txtMsubfromDate');
+			BindDatePicker('txtDsubToDate');
+			BindDatePicker('txtAsubToDate');
+			BindDatePicker('txtWsubToDate');
+			BindDatePicker('txtMsubToDate');
+			
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "block";
+			if(evt != undefined)
+			{
+				evt.currentTarget.className += " active";
+			}
+        }
+		
+		function BindDatePicker(ElementId) {
+            $("#" + ElementId + "").datepicker({
+                changeMonth: true,
+				changeYear: true,
+				dateFormat: "dd-M-y",
+				minDate:0
+            });
+        }
+
+    </script>
+<form name="form1" method="post" action="/ar/starters" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="PCcVwKV87gSggI44stQfU4nCZu98D0sKXLZqwnWvYnzJR2Zpd3ziV5hp+K8Hb43YUXNiug==" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+<div>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="65E7F3AF" />
+</div>
+<input type="hidden" name="ctl00$hdnAntiforgery" id="hdnAntiforgery" value="492c1ab9-6622-4aa1-9650-b6e06f4d1dce" />
+<div class="tagalys-namespace" id="tagalys-namespace" style="display:none"></div>
+<div class="body_parentdiv off-canvas-wrap" data-offcanvas="">
+<center>
+<div id="maindL" class="inner-wrap" style="position: relative; width: 990Px;">
+<div id="maindR" style="position: relative; width: 100%;">
+<center>
+<div class="main" id="innerwrap" style="width: 100%;">
+<div class="header-wrapper">
+<div id="headersectiondiv">
+<div>
+<div id="header">
+<div>
+<div><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Header_Logo_Ar" href="//www.jordan.pizzahut.me/ar"><img alt="PizzaHut" width="100" height="94" src="//martjackamstorage.azureedge.net/am-resources/c79bc8ac-4c69-460f-829b-4d40568d0cca/Images/userimages/logo_arb.png"></a></div>
+<div class="halogo"><div class="h-img"></div></div>
+</div>
+</div>
+</div>
+<div id="nav">
+<div class="nav_main_right" id="strDivmain" runat="server"><div class="nav_main_left"><ul id="sample-menu-2" class="sf-menu">
+<li class="current Item_0"> <a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="بيتزا _En_D" href="https://www.jordan.pizzahut.me/ar/pizza">
+<span class="main_navbtn_l"></span> <span class="main_navbtn_m">بيتزا</span> <span class="main_navbtn_r"></span></a>
+</li>
+<li class="current Item_1"> <a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="ميلتس _En_D" href="https://www.jordan.pizzahut.me/ar/Melts">
+<span class="main_navbtn_l"></span> <span class="main_navbtn_m">ميلتس</span> <span class="main_navbtn_r"></span></a>
+</li>
+<li class="current Item_2"> <a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="أكثر _En_D" href="#"><span class="main_navbtn_l"></span>
+<span class="main_navbtn_m">أكثر</span><span class="main_navbtn_r"></span></a>
+<ul class="pulldownul" style="display:none">
+<li class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="حلويات  _En_D">
+<a href="https://www.jordan.pizzahut.me/ar/desserts">حلويات</a>
+</li>
+<li class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="مشروبات  _En_D">
+<a href="https://www.jordan.pizzahut.me/ar/drinks">مشروبات</a>
+</li>
+<li class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="السلطات  _En_D">
+<a href="https://www.jordan.pizzahut.me/ar/salads">السلطات</a>
+</li>
+<li class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Pasta  _En_D">
+<a href="https://www.jordan.pizzahut.me/ar/pasta">Pasta</a>
+</li>
+</ul>
+</li>
+<li class="current Item_3"> <a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="مقبلات _En_D" href="https://www.jordan.pizzahut.me/ar/starters">
+<span class="main_navbtn_l"></span> <span class="main_navbtn_m">مقبلات</span> <span class="main_navbtn_r"></span></a>
+<ul class="pulldownul" style="display:none">
+<li class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="أجنحة الدجاج  _En_D">
+<a href="https://www.jordan.pizzahut.me/ar/wings">أجنحة الدجاج</a>
+</li>
+<li class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="مقبلات  _En_D">
+<a href="https://www.jordan.pizzahut.me/ar/appetizers">مقبلات</a>
+</li>
+</ul>
+</li>
+<li class="current lastmenu"> <a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="العروض _En_D" href="https://www.jordan.pizzahut.me/ar/deals"><span class="main_navbtn_l"></span><span class="main_navbtn_m">العروض</span> <span class="main_navbtn_r"></span></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="searchbarbg_r" id="searchmain">
+<div class="searchbarbg_l">
+<div style="" class="cartdetails_div">
+<div class="empty_cart NoItems" style="display:none">
+<label class="cartitem_number noitems">0</label>
+<label class="lblEmptyBskt noitems"> 0.00</label>
+</div>
+<div style="display:none" class="cartdetailsinfo HasItems">
+<div class="cartitemdetails" style="padding-right:2px;">
+<label class="cartitem_number hasitems show_quickview" style="display:none;">:</label>
+<label class="cart_amnt HasItems show_quickview" style="display:none;" data-displayordertotal="true">test<span class="sp_currencysyb">test</span></label>
+<label class="cartcurrency HasItems show_quickview" style="display:none;">test<span class="sp_currencysyb" style="display:none;"></span></label>
+</div>
+</div>
+<div class="cartbtn_div HasItems" style="display:none;">
+<div class="cart_btn"><a href="//www.jordan.pizzahut.me/ar/Cart.aspx" class="buttonlnk DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Header_Cart_Icon_Ar">View Cart</a></div>
+<a href="#" class="show_quickview" style="display:none;"></a>
+</div>
+</div>
+</div>
+</div>
+<div id="ctl00_Searchbox_PinCodeDisplay" class="postal_code">
+</div>
+<div id="currentLocation" class="postcode_txt" data-event="Page_Load">
+<a href="javascript:void(0)" class="startorder-btn" id="btnChangeLocation">البدء بالطلب</a>
+</div>
+<div id="myaccount">
+<div class="userlogin">
+<span><label id="lblusrn">مرحباً</label> </span>
+<a href="https://www.jordan.pizzahut.me/ar/Registration/Login.aspx?ReturnUrl=https://www.jordan.pizzahut.me/ar/" class="loginlnk" rel="nofollow"> تسجيل مستخدم جديد </a>
+<a href="https://www.jordan.pizzahut.me/ar/Registration/UserRegistration.aspx?ReturnUrl=https://www.jordan.pizzahut.me/ar/" class="loginlnk" rel="nofollow">سجل في طلبات</a>
+<a href="//www.jordan.pizzahut.me/ar/find-pizza-hut" class="findapizza DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Header_Find_A_PizzaHut_Ar">فروعنا</a>
+</div>
+</div>
+<div class="ctrl_languages">
+<label>الاماراتي</label>
+<span>|</span>
+<a href="https://www.jordan.pizzahut.me/starters?lng=en" id="en" class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Header_English_Site" data-cururl="EnablerLibrary.SeoUrl" rel="nofollow">English</a>
+</div>
+<div class="location-strip"></div>
+</div>
+</div>
+<div class="mobileonly" id="mobilesection">
+<div class="fixed" id="dockedHeader">
+<div class="small-3 columns"> <a class="left-off-canvas-toggle nav-btn" href="#"></a> </div>
+<div class="small-6 columns"> <a href="//www.jordan.pizzahut.me/ar"><img alt="PizzaHut" width="60" height="56" src="//martjackamstorage.azureedge.net/am-resources/c79bc8ac-4c69-460f-829b-4d40568d0cca/Images/userimages/logo_arb.png"></a> <div class="ctrl_languages">
+<label>الاماراتي</label>
+<span>|</span>
+<a href="https://www.jordan.pizzahut.me/starters?lng=en" id="en" class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="M_English Site" rel="nofollow">English</a>
+</div>
+</div>
+<div class="small-3 columns">
+
+<a class="cart-control right-off-canvas-toggle"></a>
+<div class="cartitems">
+<span class="cartitem_number"></span>
+</div>
+</div>
+</div>
+<div class="mobile-cart-notification" id="cartnotification" data-timetoclose="10000" style="display:none">
+<span class="arrow"></span>
+<div class="cart-title" id="title">أضيف إلى عربتك</div>
+<div class="cart-items">
+<div id="productimage" class="product-image">
+<img src="">
+</div>
+<div class="product-details">
+<div id="producttitle" class="product-title">
+</div>
+<div id="variants" class="product-varient">
+</div>
+<div class="product-price">
+<span class='sp_currencysyb'>د.ا.‏</span> <span class="sp_amt" id="productprice"></span>
+</div>
+</div>
+<div id="responsive-cartbuttons" class="cart-buttons">
+<a class="pay-btn DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Header_Checkout_Ar_M" href="#"><span class="navbtn_l">&nbsp;</span><span class="navbtn_m">الدفع</span><span class="navbtn_r">&nbsp;</span></a>
+<a class="byn-addmore DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Header_Add More Food_Ar_M" href="//www.jordan.pizzahut.me/ar/add-more-food">أضف المزيد</a>
+</div>
+</div>
+</div>
+<div class="mobile-navigation left-off-canvas-menu ">
+<div class="row">
+<div class="small-12 columns">
+<div class="mobile-login">
+<a href="https://www.jordan.pizzahut.me/ar/Registration/Login.aspx?ReturnUrl=https://www.jordan.pizzahut.me/ar/" class="loginlnk" rel="nofollow"> تسجيل مستخدم جديد </a>
+<a href="https://www.jordan.pizzahut.me/ar/Registration/UserRegistration.aspx?ReturnUrl=https://www.jordan.pizzahut.me/ar/" class="loginlnk" rel="nofollow">سجل في طلبات</a>
+</div>
+<div class="accordion">
+<h2>قائمة الطعام </h2>
+<div class="pane">
+<ul class="m-nav">
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="بيتزا  _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/pizza">بيتزا </a> </li>
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Melts _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/Melts">Melts </a> </li>
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="مقبلات _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/starters">مقبلات </a> </li>
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="المشروبات  _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/drinks">المشروبات </a> </li>
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="حلويات  _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/desserts">حلويات </a> </li>
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="السلطات _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/salads">السلطات </a> </li>
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="عروض خاصة _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/deals">عروض خاصة </a> </li>
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Pasta _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/pasta">Pasta </a> </li>
+</ul>
+</div>
+<a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="حسابي  _En_M" target="_self" href="https://www.jordan.pizzahut.me/Registration/MyAccount.aspx">حسابي </a>
+<a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="كيف تصل الينا _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/find-pizza-hut">كيف تصل الينا </a>
+<h2>خدمات العملاء </h2>
+<div class="pane">
+<ul class="m-nav">
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="اتصل بنا  _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/contact-us">اتصل بنا </a> </li>
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="أسئلة وأجوبة  _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/faqs">أسئلة وأجوبة </a> </li>
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="COVID-19 Measures _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/covid19">COVID-19 Measures </a> </li>
+</ul>
+</div>
+<a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="تغذية  _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/nutrition-information">تغذية </a>
+<h2>من نحن </h2>
+<div class="pane">
+<ul class="m-nav">
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="قصتنا  _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/about-us">قصتنا </a> </li>
+</ul>
+</div>
+<h2>سياسات </h2>
+<div class="pane">
+<ul class="m-nav">
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="سياسة الخصوصية  _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/privacy-policy">سياسة الخصوصية </a> </li>
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="شروط الاستخدام  _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/terms-and-conditions">شروط الاستخدام </a> </li>
+</ul>
+</div>
+<h2>دول أخرى </h2>
+<div class="pane">
+<ul class="m-nav">
+<li><a class="no-subnav DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="تغيير الدولة  _En_M" target="_self" href="https://www.jordan.pizzahut.me/ar/country-selector">تغيير الدولة </a> </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="tollfree"><a href="tel:065855555">06-5855555</a></div>
+</div>
+<div class="mobile-cart right-off-canvas-menu">
+</div>
+<a href="javascript:void(0)" class="startorder-btn" id="btnChangeLocation">البدء بالطلب</a>
+</div>
+<div id="ctl00_Searchbox_PinCodeDisplay" class="postal_code">
+</div><div id="ctl00_Searchbox_PCPU_Div" class="PCPU_Div" style="display: none;">
+</div>
+<script type="text/javascript">
+    DynamicModules.push(function () {
+        require(['App/Widgets/LocationPopUpLauncher'], function (locationpopuplauncher) {
+            locationpopuplauncher();
+            $('.PCPU_Div').LocationPopUpLauncher({ IsDeliveryModeEnabled: 'True', DeliveryMode: '', IsPopup: 'True' });
+        });
+    });
+</script>
+<a id="ctl00_lnk" href="javascript:__doPostBack(&#39;ctl00$lnk&#39;,&#39;&#39;)"></a>
+<a id="ctl00_LinkButton1" class="cp_displayHidden" href="javascript:__doPostBack(&#39;ctl00$LinkButton1&#39;,&#39;&#39;)"></a>
+<div id="main" class="">
+<div id="">
+</div>
+<div style="width:100%;">
+<div class="col1_T04">
+<div id="ctl00_ContentPlaceHolder1_ctl00_Pane1" class="col1_content_T04" style="width:990Px">
+<div class="container_nopadding">
+<div class="controlcontent_r">
+<div class="htmlbucket">
+<p>
+<div class="cate_banner"><img alt="starters" height="100%" src="//martjackamstorage.azureedge.net/am-resources/c79bc8ac-4c69-460f-829b-4d40568d0cca/Images/userimages/14-05-18/Starters_Ar.jpg" width="100%" /></div>
+</p>
+</div>
+</div>
+<div class="r_bottom">
+<div class="l_bottom">
+</div>
+</div>
+</div>
+<div id="ctl00_ContentPlaceHolder1_ctl00_ctl01_divMain">
+<div class="container1">
+<div class='subheading_r'>
+<h1>مقبلات بيتزا هت</h1> </div>
+<div id="2564962_CU00216334" data-showcasetype="razor" data-widget="lightweightvariant" data-wgo-descirptionview="true">
+<div id="html">
+<div style="width: 100%; text-align: center;">
+<img id="loderImg" alt="Loading" src="//martjackamassets.azureedge.net/css/themes/mjt02012525/images/main/show_loader.gif" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">    
+    DynamicModules.push(function () {
+    require(['App/Widgets/ProductShowCase'],function(ProductShowCase){
+        ProductShowCase();
+        var objShowCaseInputs = {"PgControlId":2564962,"IsConfigured":true,"ConfigurationType":"","CombiIds":"","PageNo":1,"DivClientId":"2564962_CU00216334","SortingValues":"CS","ShowViewType":"H","PropertyBag":null,"IsRefineExsists":true,"CID":"CU00216334","CT":0,"TabId":0,"LocationIds":"0","CurrencyCode":"JOD","ContentType":"A"};
+        $('#' + objShowCaseInputs.DivClientId + '').ProductShowCase({ ShowCaseInputs: {"PgControlId":2564962,"IsConfigured":true,"ConfigurationType":"","CombiIds":"","PageNo":1,"DivClientId":"2564962_CU00216334","SortingValues":"CS","ShowViewType":"H","PropertyBag":null,"IsRefineExsists":true,"CID":"CU00216334","CT":0,"TabId":0,"LocationIds":"0","CurrencyCode":"JOD","ContentType":"A"} ,Purpose: 'Regular', ShowCaseType: 'PS' , IsDataAvailable: 'False',UnLoadShowcase:'False'});
+        ProductCommon.FlipImageAttr();
+        if ($('#' + objShowCaseInputs.DivClientId + '').find('.controlcontent_r').attr('rel') != undefined) {
+            var TempAttr = $('div[id="' + objShowCaseInputs.DivClientId + '"]').find('.loadmore').find('.pagercontrol .pagerdiv .pagerdiv span').next().attr('href');
+            if (TempAttr != undefined && TempAttr != null){ 
+                $('#' + objShowCaseInputs.DivClientId + ' .loadmoreproducts').find('.div_l').wrapInner('<a href="' + TempAttr + '"/>');
+            }
+        }
+    });
+    });
+</script>
+</div>
+</div>
+<div class="col2_T04">
+<div class="col2_content_T04">
+</div>
+</div>
+<div class="col3_T04">
+<div class="col3_content_T04">
+</div>
+</div>
+</div>
+<div id="subscriptiondialog"></div>
+</div>
+<div id="footer" style="padding-bottom: 5px;">
+<div style="clear:both;">
+<div class="bottombartop_r">
+<div class="bottombartop_l"></div>
+</div>
+<div class="bottombarmiddle_r">
+<div class="bottombarmiddle_l">
+<center>
+</center>
+<div class='storeaddress'><div class="customfooter">
+<div class="footrow">
+<div class="leftcolumn">
+<div class="innercolumn">
+<h6>حسابي</h6>
+<ul>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Signin_Ar" href="//www.jordan.pizzahut.me/ar/Registration/Login.aspx">تسجيل دخول</a></li>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Create your account_Ar" href="#">تسجيل حساب جديد</a></li>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_My Account_Ar" href="//www.jordan.pizzahut.me/ar/Registration/MyAccount.aspx?tabkey=Profile">حسابي</a></li>
+</ul>
+<h6>سياسة الموقع</h6>
+<ul>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Privacy Policy_Ar" href="//www.jordan.pizzahut.me/ar/privacy-policy">سياسة الخصوصية</a></li>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Terms of Use_Ar" href="//www.jordan.pizzahut.me/ar/terms-and-conditions">شروط الاستخدام</a></li>
+</ul>
+<h6>معلومات غذائية</h6>
+<ul>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Nutrition_Ar" href="//www.jordan.pizzahut.me/ar/nutrition-information">معلومات غذائية</a></li>
+</ul>
+</div>
+<div class="innercolumn">
+<h6>من نحن</h6>
+<ul>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Our Story_Ar" href="//www.jordan.pizzahut.me/ar/about-us">عن بيتزاهت</a></li>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Our Careers_Ar" href="//americana-group.com/careers/" target="_blank">انضم الينا</a></li>
+
+</ul>
+<h6>خدمات العملاء</h6>
+<ul>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Contact Us_Ar" href="//www.jordan.pizzahut.me/ar/contact-us">اتصل بنا</a></li>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Feedback_Ar" href="//www.jordan.pizzahut.me/ar/feedback">ارائكم</a></li>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Find A PizzaHut_Ar" href="//www.jordan.pizzahut.me/ar/find-pizza-hut">ابحث عن بيتزاهت</a></li>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_FAQs_Ar" href="//www.jordan.pizzahut.me/ar/faqs">اسئلة متكررة</a></li>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_COVID-19 Measures_Ar" href="//www.jordan.pizzahut.me/ar/covid19">COVID-19 Measures</a></li>
+</ul>
+</div>
+<div class="innercolumn hotdeals">
+<h6>عروض خاصة</h6>
+<ul>
+<li><a class="locationpopup DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Party Meal_Ar" href="//www.jordan.pizzahut.me/ar/party-meal/p/8283302">بارتي بوكس</a></li>
+
+<li><a class="locationpopup DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_family-meal_Ar" href="//www.jordan.pizzahut.me/ar/family-meal/p/8283296">وجبة عائلية</a></li>
+<li><a class="locationpopup DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_meal-for-2_Ar" href="//www.jordan.pizzahut.me/ar/meal-for-2/p/8283288">وجبة لشخصين</a></li>
+<li><a class="locationpopup DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_any-3-large_Ar" href="//www.jordan.pizzahut.me/ar/any-3-large/p/8283286">اي 3 بيتزا حجم كبير</a></li>
+
+<li><a class="locationpopup DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_any-2-large_Ar" href="//www.jordan.pizzahut.me/ar/anytwolarge/p/8283228">اي 2 بيتزا حجم كبير</a></li>
+<li><a class="locationpopup DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_any-2-medium_Ar" href="//www.jordan.pizzahut.me/ar/any-2-medium/p/8283226">اي 2 بيتزا حجم وسط</a></li>
+
+<li><a class="locationpopup DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_chicken-baked-pasta-meal_Ar" href="//www.jordan.pizzahut.me/ar/chicken-baked-pasta-meal/p/8283218">وجبة باستا الدجاج</a></li>
+<li><a class="locationpopup DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_foot-long-lasagna-meal_Ar" href="//www.jordan.pizzahut.me/ar/foot-long-lasagna-meal/p/8283216">وجبة فوت لونج لازانيا </a></li>
+
+<li><a class="locationpopup DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_individual-pizza-meal_Ar" href="//www.jordan.pizzahut.me/ar/individual-pizza-meal/p/8282960">وجبة بيتزا فردية</a></li>
+<li><a class="locationpopup DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_stuffed_crust_Ar" href="//www.jordan.pizzahut.me/ar/stuffedcrust/p/8292816">بيتزا ستافد كرست (الاطراف المحشوة بالجبنة)</a></li>
+
+</ul>
+</div>
+<div class="innercolumn">
+<h6>قائمة الطعام</h6>
+<ul>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Pizza_Ar" href="//www.jordan.pizzahut.me/ar/pizza">البيتزا</a></li>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Pasta_Ar" href="//www.jordan.pizzahut.me/ar/pasta">الباستا</a></li>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Starters_Ar" href="//www.jordan.pizzahut.me/ar/starters">مقبلات</a></li>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Drinks_Ar" href="//www.jordan.pizzahut.me/ar/drinks">المشروبات</a></li>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Desserts_Ar" href="//www.jordan.pizzahut.me/ar/desserts">حلويات</a></li>
+<li><a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Salads_Ar" href="//www.jordan.pizzahut.me/ar/salads">السلطات</a></li>
+</ul>
+</div>
+</div>
+<div class="rightcolumn">
+<div class="halogo_ft">
+<div class="h-img"></div>
+</div>
+<h6>تواصل مع بيتزا هت</h6>
+<div class="socialinks"><a class="facebook DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Facebook Page_En_D" href="https://www.facebook.com/mypizzahut/?brand_redir=321935321302049" target="_blank">facebook</a>  <a class="youtube DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Youtube_En_D" href="https://www.youtube.com/user/PizzaHutMiddleEast" target="_blank">youtube</a> <a class="instagram DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Instagram Page_En_D" href="https://www.instagram.com/pizzahutme/" target="_blank">instagram</a></div>
+<h6>اختر البلد</h6>
+<div class="selectcount"><span>الاردن</span>
+<div class="country-flag"></div>
+<a class="DL-CustomEvent" data-dlaction="click" data-dlevent="Navigate" data-dllabel="Footer_Change Country_Ar" href="//www.jordan.pizzahut.me/ar/country-selector">تغيير</a></div>
+<h6 class="tollfree" style="padding:0 22px 0 0">06-5855555</h6>
+</div>
+</div>
+<div class="footrow">
+<div class="copyright">
+<p>©بيتزا هت. جميع الحقوق محفوظة. اسم بيتزا هت والشعارات وعلامات ذات الصلة هي علامات تجارية مسجلة لبيتزا هت.</p>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+if (MartJack.Current.Location.LocationId == 0) {
+	$(".hotdeals").find(".locationpopup").unbind('click').click(function () {
+	var _redirectUrl = $(this).attr("href");
+	$(".hotdeals").find(".locationpopup").attr("href", "javascript:void(0)");
+	$('.PCPU_Div').LocationPopUpLauncher('GetLocationPopup', _redirectUrl);
+  });
+}
+</script></div>
+</div>
+</div>
+<div class="bottombarbottom_r">
+<div class="bottombarbottom_l"></div>
+</div>
+</div>
+<div id="ctl00_pnlPoweredByLogo" class="martjacklogo">
+<a id="ctl00_lnkPoweredby" title="منصة التجارة الإلكترونية" href="https://www.capillarytech.com/products/anywhere-commerce-plus/anywhere-commerce" target="_blank"></a>
+</div>
+</div>
+<a class="exit-off-canvas"></a>
+</div>
+</center>
+</div>
+</div>
+</center>
+<a id="ctl00_lnkAuthen" href="javascript:__doPostBack(&#39;ctl00$lnkAuthen&#39;,&#39;&#39;)"></a>
+<a id="ctl00_lnkregAuthen" href="javascript:__doPostBack(&#39;ctl00$lnkregAuthen&#39;,&#39;&#39;)"></a>
+</div>
+<div id="divCompPop" style="display: none;">
+</div>
+<div id="divScriptBlock">
+</div>
+<input type="hidden" name="ctl00$ctl00_Searchbox_hdnincategory" id="ctl00_Searchbox_hdnincategory" />
+<input type="hidden" name="ctl00$ctl00_Searchbox_hdnSearchTreeJSONString" id="ctl00_Searchbox_hdnSearchTreeJSONString" />
+</form>
+<script type="text/javascript" async src="https://assets.eu.content-cdn.io/script/Zone04/js/Common-Built.js?v=v2284"></script><script type="text/javascript" async src="https://storage.eu.content-cdn.io/am-resources/c79bc8ac-4c69-460f-829b-4d40568d0cca/Plugin/CustomScript.js?v=v272"></script>
+</body>
+</html>
