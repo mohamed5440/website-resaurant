@@ -42,11 +42,17 @@ button {
 span {
     color: var(--Color2);
 }
+::selection {
+    background-color: var(--Color2);
+    color: var(--Color);
+}
 /* Start Header */
 .header {
     background-color: var(--Color2);
     width: 100%;
     height: 56px;
+    position: fixed;
+    top: 0;
 }
 .container {
     padding-left: 15px;
@@ -54,6 +60,15 @@ span {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+/* Monlie */
+@media (max-width: 767px) {
+    .header {
+        height: 44px !important;
+    }
+}
+
 
 /* Small */
 @media (min-width: 768px) {
@@ -68,8 +83,6 @@ span {
     }
     .container .nav_menu .nav_list .nav_items:hover {
         transition: var(--Transition);
-        background-color: var(--Color);
-        color: var(--Color1);
     }
     .landing_home .container .content {
         width: 50%;
@@ -126,7 +139,7 @@ span {
     .container .nav_menu {
         position: absolute;
         left: 0;
-        top: 56px;
+        top: 44px;
         background-color: var(--Color2);
         width: 100%;
         height: 40vh;
@@ -146,7 +159,7 @@ span {
         color: var(--Color);
     }
     .container .icon_menu span {
-        font-size: 40px;
+        font-size: 30px;
         color: var(--Color);
     }
     .icon_search {
@@ -191,7 +204,7 @@ span {
 }
 .container .nav_logo img {
     max-width: 100%;
-    width: 45px;
+    width: 35px;
 }
 /* End Header */
 
@@ -225,11 +238,18 @@ span {
     .container .content .mar {
         flex: 1;
     }
+    .landing_home {
+        padding-top: 100px;
+    }
 
+}
+@media (min-width: 767px) {
+    .landing_home {
+        padding-top: 170px;
+    }
 }
 .landing_home {
     background-color: hsla(17, 100%, 50%, 0.1);
-    padding-top: 100px;
 }
 .landing_home .container {
     display: flex;
